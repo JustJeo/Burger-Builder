@@ -87,7 +87,7 @@ let game = {
         if (score > highscore) {
             highscore = score
             document.querySelector(".results").innerHTML = "Great job! You got a new high score! You are a burger master!"
-        } else if ((score > 0) && (score < highscore)) {
+        } else if ((score >= 0) && (score <= highscore)) {
             document.querySelector(".results").innerHTML = "You've got some happy customers!"
         } else {
             document.querySelector(".results").innerHTML = "Wow. You did terrible. What was that?"
