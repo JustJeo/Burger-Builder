@@ -69,20 +69,28 @@ let game = {
     buttonClick: function(event) {
         const gameChoice = ["topBun", "onion", "tomato", "lettuce", "cheese", "patty", "bottomBun"]
         if (event.target.id === "topBun") {
+            game.playerBurger.unshift(gameChoice[0])
             console.log("Top Bun")
         } else if (event.target.id === "onion") {
+            game.playerBurger.unshift(gameChoice[1])
             console.log("Onion")
         } else if (event.target.id === "tomato") {
+            game.playerBurger.unshift(gameChoice[2])
             console.log("Tomato")
         } else if (event.target.id === "lettuce") {
+            game.playerBurger.unshift(gameChoice[3])
             console.log("Lettuce")
         } else if (event.target.id === "cheese") {
+            game.playerBurger.unshift(gameChoice[4])
             console.log("Cheese")
         } else if (event.target.id === "patty") {
+            game.playerBurger.unshift(gameChoice[5])
             console.log("Patty")
         } else {
+            game.playerBurger.unshift(gameChoice[6])
             console.log("Bottom Bun")
         }
+        console.log(game.playerBurger)
     },
 
 // Burger Check!
