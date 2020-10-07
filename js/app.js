@@ -18,13 +18,6 @@ let highscore = 0;
 // document.getElementById("onion").addEventListener("click", buttonClick);
 // document.getElementById("topBun").addEventListener("click", buttonClick);
 
-// Start Game!
-let game = {
-    
-}
-    // Create a button for starting the game
-        // When clicked it will fire multiple functions
-            // Timer Countdown
 function timeBegin() {
     const timeInterval = setInterval(() => {
         if (timer === 0) {
@@ -38,12 +31,42 @@ function timeBegin() {
         timerText.innerHTML = `Timer: ${timer}s`
     }, 1000)
 }
+
+// Start Game!
+let game = {
+    playerBurger: [],
+    customerBurger: ["topBun", "patty", "bottomBun"],
+    // Create a button for starting the game
+        // When clicked it will fire multiple functions
+            // Timer Countdown
+
             // High Score
 
-// Create a "customerOrder" function
+// Create a "customerBurger" function
     // Creates an array where it ALWAYS starts with a "topBun", randomizes the middle ingredients, ALWAYS has a "patty", and always ends with a "bottomBun"
+    customerOrder: function () {
+        let randomOrder = Math.floor(Math.random() * 4);
+            if (randomOrder === 3) {
+                game.customerBurger.splice(1, 0, "onion")
+                game.customerBurger.splice(1, 0, "cheese")
+                game.customerBurger.splice(1, 0, "tomato")
+                game.customerBurger.splice(1, 0, "lettuce")
+            } else if (randomOrder === 2) {
+                game.customerBurger.splice(1, 0, "lettuce")
+                game.customerBurger.splice(1, 0, "cheese")
+                game.customerBurger.splice(1, 0, "onion")
+            } else if (randomOrder === 1) {
+                game.customerBurger.splice(1, 0, "lettuce")
+                game.customerBurger.splice(1, 0, "cheese")
+            } else {
+                game.customerBurger.splice(1, 0, "cheese")
+            }
+        }
+    }
+    game.customerOrder();
+    console.log(game.customerBurger)
 
-// Create a "playerOrder" function
+// Create a "playerBurger" function
     // Starts with an empty array for players and with each ingredient button pressed will UNSHIFT the ingredient into the array.
     // Building from the bottom up will mean an UNSHIFT and not a POP
 
