@@ -66,9 +66,23 @@ let game = {
         
     },
 
-    buttonClick: function() {
-        const gameChoice = [""]
-        console.log("click!")
+    buttonClick: function(event) {
+        const gameChoice = ["topBun", "onion", "tomato", "lettuce", "cheese", "patty", "bottomBun"]
+        if (event.target.id === "topBun") {
+            console.log("Top Bun")
+        } else if (event.target.id === "onion") {
+            console.log("Onion")
+        } else if (event.target.id === "tomato") {
+            console.log("Tomato")
+        } else if (event.target.id === "lettuce") {
+            console.log("Lettuce")
+        } else if (event.target.id === "cheese") {
+            console.log("Cheese")
+        } else if (event.target.id === "patty") {
+            console.log("Patty")
+        } else {
+            console.log("Bottom Bun")
+        }
     },
 
 // Burger Check!
