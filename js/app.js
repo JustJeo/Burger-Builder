@@ -3,7 +3,7 @@ console.log("AYO! This is Jeo!")
 //Declare multiple things when the page loads
     // Buttons to add ingredients
     // Timer stuck at 3:00
-let timer = 180;
+let timer = 15;
     // Current Score set at 0
 let score = 0;
     // High Score set at whatever the current high score is
@@ -29,12 +29,12 @@ function timeBegin() {
     const timeInterval = setInterval(() => {
         if (timer === 0) {
             clearInterval(timeInterval);
-            document.querySelector(".timer").removeEventListener("click", buttonClick);
+            document.querySelector("#timer").removeEventListener("click", beginGame);
         } else {
             timer--
             console.log(timer)
         }
-        const timerText = document.getElementsByClassName("timer")
+        const timerText = document.getElementById("timer")
         timerText.innerHTML = `Timer: ${timer}s`
     }, 1000)
 }
