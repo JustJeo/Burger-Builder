@@ -10,13 +10,13 @@ let score = 0;
 let highscore = 0;
         // NOTE! High score WILL reset with every reload
 
-document.getElementById("bottomBun").addEventListener("click", buttonClick);
-document.getElementById("patty").addEventListener("click", buttonClick);
-document.getElementById("cheese").addEventListener("click", buttonClick);
-document.getElementById("lettuce").addEventListener("click", buttonClick);
-document.getElementById("tomato").addEventListener("click", buttonClick);
-document.getElementById("onion").addEventListener("click", buttonClick);
-document.getElementById("topBun").addEventListener("click", buttonClick);
+// document.getElementById("bottomBun").addEventListener("click", buttonClick);
+// document.getElementById("patty").addEventListener("click", buttonClick);
+// document.getElementById("cheese").addEventListener("click", buttonClick);
+// document.getElementById("lettuce").addEventListener("click", buttonClick);
+// document.getElementById("tomato").addEventListener("click", buttonClick);
+// document.getElementById("onion").addEventListener("click", buttonClick);
+// document.getElementById("topBun").addEventListener("click", buttonClick);
 
 // Start Game!
 let game = {
@@ -66,3 +66,8 @@ function timeBegin() {
             // } else {
             //     console.log("Wow. You did terrible. What was that?")
             // }
+
+const beginGame = document.getElementById("begin")
+beginGame.addEventListener("click", () => {
+    timeBegin()
+})
