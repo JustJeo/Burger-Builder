@@ -13,7 +13,7 @@ body {
 
 button {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.25em;
     background: gray;
     border-radius: 10%;
 }
@@ -32,4 +32,8 @@ img {
 
 .container {
     background-color: white;
+}
+
+span {
+    font-weight: bold;
 }
