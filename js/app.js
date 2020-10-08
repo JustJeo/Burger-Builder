@@ -5,7 +5,7 @@ console.log("AYO! This is Jeo!")
     // Timer stuck at 3:00
 let timer = 10;
     // Current Score set at 0
-let score = 10;
+let score = 15;
     // High Score set at whatever the current high score is
 let highscore = 10;
         // NOTE! High score WILL reset with every reload
@@ -57,16 +57,12 @@ let game = {
         }
     },
 
-// Create a "playerBurger" function
+// Create a "burgerMaker" function
     // Starts with an empty array for players and with each ingredient button pressed will UNSHIFT the ingredient into the array.
     // Building from the bottom up will mean an UNSHIFT and not a POP
     // REMINDER that UNSHIFT will add one or more elements to the beginning of an array
-    playerOrderr: function() {
-        const playerChoices = playerBurger;
-        
-    },
 
-    buttonClick: function(event) {
+    burgerMaker: function(event) {
         const gameChoice = ["topBun", "onion", "tomato", "lettuce", "cheese", "patty", "bottomBun"]
         if (event.target.id === "topBun") {
             game.playerBurger.unshift(gameChoice[0])
@@ -96,9 +92,11 @@ let game = {
 // Burger Check!
     orderCheck: function() {
         if (playerBurger === customerBurger) {
-            console.log("Great Job! 50 Points!")
+            document.querySelector(".check").innerHTML = "Great Job! 50 Points!"
+            score += 50
         } else {
-            console.log("Wait! Something's wrong!")
+            document.querySelector(".check").innerHTML = "Wait! Something's wrong!"
+            score -= 10
         }
     },
 
@@ -108,6 +106,7 @@ let game = {
     highscoreCheck: function () {
         if (score > highscore) {
             highscore = score
+            document.querySelector("#highscore").innerHTML = `High Score = ${highscore}`
             document.querySelector(".results").innerHTML = "Great job! You got a new high score! You are a burger master!"
         } else if ((score >= 0) && (score <= highscore)) {
             document.querySelector(".results").innerHTML = "You've got some happy customers!"
@@ -122,13 +121,17 @@ let game = {
     results.innerHTML = "Get those orders out!"
     document.body.appendChild(results)
 
-    document.getElementById("topBun").addEventListener("click", game.buttonClick);
-    document.getElementById("onion").addEventListener("click", game.buttonClick);
-    document.getElementById("tomato").addEventListener("click", game.buttonClick);
-    document.getElementById("lettuce").addEventListener("click", game.buttonClick);
-    document.getElementById("cheese").addEventListener("click", game.buttonClick);
-    document.getElementById("patty").addEventListener("click", game.buttonClick);
-    document.getElementById("bottomBun").addEventListener("click", game.buttonClick);
+    let burgerCheck = document.createElement("p")
+    burgerCheck.setAttribute("class", "check")
+    document.body.appendChild(burgerCheck)
+
+    document.getElementById("topBun").addEventListener("click", game.burgerMaker);
+    document.getElementById("onion").addEventListener("click", game.burgerMaker);
+    document.getElementById("tomato").addEventListener("click", game.burgerMaker);
+    document.getElementById("lettuce").addEventListener("click", game.burgerMaker);
+    document.getElementById("cheese").addEventListener("click", game.burgerMaker);
+    document.getElementById("patty").addEventListener("click", game.burgerMaker);
+    document.getElementById("bottomBun").addEventListener("click", game.burgerMaker);
 
 const beginGame = document.getElementById("begin")
 beginGame.addEventListener("click", () => {
