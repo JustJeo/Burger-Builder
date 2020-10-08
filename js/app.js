@@ -39,19 +39,19 @@ let game = {
     customerOrder: function () {
         let randomOrder = Math.floor(Math.random() * 5);
         if (randomOrder === 4) {
-            game.customerBurger.splice(1, 0, "cheese")
+            game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
             game.customerBurger.splice(1, 0, "onion")
         } else if (randomOrder === 3) {
-            game.customerBurger.splice(1, 0, "cheese")
+            game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "onion")
         } else if (randomOrder === 2) {
-            game.customerBurger.splice(1, 0, "cheese")
+            game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
         } else if (randomOrder === 1) {
-            game.customerBurger.splice(1, 0, "cheese")
+            game.customerBurger.splice(2, 0, "cheese")
         } else {
             game.customerBurger
         }
@@ -60,10 +60,9 @@ let game = {
 // Create a "burgerMaker" function
     // Starts with an empty array for players and with each ingredient button pressed will UNSHIFT the ingredient into the array.
     // Building from the bottom up will mean an UNSHIFT and not a POP
-    // REMINDER that UNSHIFT will add one or more elements to the beginning of an array
-
+    // REMINDER that UNSHIFT will add one or more elements to the BEGINNING of an array
     burgerMaker: function(event) {
-        const gameChoice = ["topBun", "onion", "tomato", "lettuce", "cheese", "patty", "bottomBun"]
+        const gameChoice = ["topBun", "onion", "tomato", "lettuce", "patty", "cheese", "bottomBun"]
         if (event.target.id === "topBun") {
             game.playerBurger.unshift(gameChoice[0])
             console.log("Top Bun")
@@ -76,12 +75,12 @@ let game = {
         } else if (event.target.id === "lettuce") {
             game.playerBurger.unshift(gameChoice[3])
             console.log("Lettuce")
-        } else if (event.target.id === "cheese") {
-            game.playerBurger.unshift(gameChoice[4])
-            console.log("Cheese")
         } else if (event.target.id === "patty") {
-            game.playerBurger.unshift(gameChoice[5])
+            game.playerBurger.unshift(gameChoice[4])
             console.log("Patty")
+        } else if (event.target.id === "cheese") {
+            game.playerBurger.unshift(gameChoice[5])
+            console.log("Cheese")
         } else {
             game.playerBurger.unshift(gameChoice[6])
             console.log("Bottom Bun")
@@ -129,8 +128,8 @@ let game = {
     document.getElementById("onion").addEventListener("click", game.burgerMaker);
     document.getElementById("tomato").addEventListener("click", game.burgerMaker);
     document.getElementById("lettuce").addEventListener("click", game.burgerMaker);
-    document.getElementById("cheese").addEventListener("click", game.burgerMaker);
     document.getElementById("patty").addEventListener("click", game.burgerMaker);
+    document.getElementById("cheese").addEventListener("click", game.burgerMaker);
     document.getElementById("bottomBun").addEventListener("click", game.burgerMaker);
 
 const beginGame = document.getElementById("begin")

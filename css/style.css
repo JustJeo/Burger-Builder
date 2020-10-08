@@ -23,7 +23,9 @@ button:hover {
 }
 
 img {
+    margin: 0 auto;
     width: 200px;
+    display: block;
 }
 
 .plate > img{
