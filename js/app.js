@@ -33,6 +33,7 @@ let game = {
         // When clicked it will fire multiple functions
             // Timer Countdown
             // High Score
+            // Create display for customer order
 
 // Create a "customerBurger" function
     // Creates an array where it ALWAYS starts with a "topBun", randomizes the middle ingredients, ALWAYS has a "patty", and always ends with a "bottomBun"
@@ -65,28 +66,37 @@ let game = {
         const gameChoice = ["topBun", "onion", "tomato", "lettuce", "patty", "cheese", "bottomBun"]
         if (event.target.id === "topBun") {
             game.playerBurger.unshift(gameChoice[0])
+            document.getElementById("topBunPic").style.display="block"
             console.log("Top Bun")
         } else if (event.target.id === "onion") {
             game.playerBurger.unshift(gameChoice[1])
+            document.getElementById("onionPic").style.display="block"
             console.log("Onion")
         } else if (event.target.id === "tomato") {
             game.playerBurger.unshift(gameChoice[2])
+            document.getElementById("tomatoPic").style.display="block"
             console.log("Tomato")
         } else if (event.target.id === "lettuce") {
             game.playerBurger.unshift(gameChoice[3])
+            document.getElementById("lettucePic").style.display="block"
             console.log("Lettuce")
         } else if (event.target.id === "patty") {
             game.playerBurger.unshift(gameChoice[4])
+            document.getElementById("pattyPic").style.display="block"
             console.log("Patty")
         } else if (event.target.id === "cheese") {
             game.playerBurger.unshift(gameChoice[5])
+            document.getElementById("cheesePic").style.display="block"
             console.log("Cheese")
         } else {
             game.playerBurger.unshift(gameChoice[6])
+            document.getElementById("bottomBunPic").style.display="block"
             console.log("Bottom Bun")
         }
         console.log(game.playerBurger)
     },
+
+// Create an "orderUp" button to submit orders
 
 // Burger Check!
     orderCheck: function() {
@@ -115,6 +125,9 @@ let game = {
     }
 }
 
+// Create a reset button to play again WITHOUT reloading the page
+    // This will keep the highscore and refreshing the page will set it all to their default value
+
     let results = document.createElement("h2")
     results.setAttribute("class", "results")
     results.innerHTML = "Get those orders out!"
@@ -134,6 +147,7 @@ let game = {
 
 const beginGame = document.getElementById("begin")
 beginGame.addEventListener("click", () => {
+    document.getElementById("begin").style.display="none"
     timeBegin()
     game.customerOrder()
     console.log(game.customerBurger)
