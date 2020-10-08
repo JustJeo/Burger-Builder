@@ -12,9 +12,9 @@ body {
 }
 
 button {
-    color: white;
+    color: black;
     font-size: 1.25em;
-    background: gray;
+    background: lightgray;
     border-radius: 5%;
 }
 
@@ -32,9 +32,11 @@ img {
     margin-bottom: 50px;
 }
 
-.plate > img{
-    width: 500px;
+#orderUp, #reset {
+    display: none;
 }
+
+
 
 span {
     font-weight: bold;
@@ -43,4 +45,5 @@ span {
 #begin {
     margin: 50px 0 50px 0;
     background: limegreen;
+    color: white;
 }

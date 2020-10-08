@@ -5,7 +5,7 @@ console.log("AYO! This is Jeo!")
     // Timer stuck at 3:00
 let timer = 10;
     // Current Score set at 0
-let score = 15;
+let score = 20;
     // High Score set at whatever the current high score is
 let highscore = 10;
         // NOTE! High score WILL reset with every reload
@@ -44,17 +44,22 @@ let game = {
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
             game.customerBurger.splice(1, 0, "onion")
+            document.getElementById("ticket").innerHTML = "Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 3) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "onion")
+            document.getElementById("ticket").innerHTML = "Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 2) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
+            document.getElementById("ticket").innerHTML = "Top Bun, Lettuce, Patty Cheese, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
+            document.getElementById("ticket").innerHTML = "Top Bun, Patty, Cheese, Bottom Bun"
         } else {
             game.customerBurger
+            document.getElementById("ticket").innerHTML = "Top Bun, Patty, Bottom Bun"
         }
     },
 
@@ -96,8 +101,6 @@ let game = {
         console.log(game.playerBurger)
     },
 
-// Create an "orderUp" button to submit orders
-
 // Burger Check!
     orderCheck: function() {
         if (playerBurger === customerBurger) {
@@ -128,27 +131,32 @@ let game = {
 // Create a reset button to play again WITHOUT reloading the page
     // This will keep the highscore and refreshing the page will set it all to their default value
 
-    let results = document.createElement("h2")
-    results.setAttribute("class", "results")
-    results.innerHTML = "Get those orders out!"
-    document.body.appendChild(results)
+let results = document.createElement("h2")
+results.setAttribute("class", "results")
+results.innerHTML = "Get those orders out!"
+document.body.appendChild(results)
 
-    let burgerCheck = document.createElement("p")
-    burgerCheck.setAttribute("class", "check")
-    document.body.appendChild(burgerCheck)
+let burgerCheck = document.createElement("p")
+burgerCheck.setAttribute("class", "check")
+document.body.appendChild(burgerCheck)
 
-    document.getElementById("topBun").addEventListener("click", game.burgerMaker);
-    document.getElementById("onion").addEventListener("click", game.burgerMaker);
-    document.getElementById("tomato").addEventListener("click", game.burgerMaker);
-    document.getElementById("lettuce").addEventListener("click", game.burgerMaker);
-    document.getElementById("patty").addEventListener("click", game.burgerMaker);
-    document.getElementById("cheese").addEventListener("click", game.burgerMaker);
-    document.getElementById("bottomBun").addEventListener("click", game.burgerMaker);
+document.getElementById("topBun").addEventListener("click", game.burgerMaker);
+document.getElementById("onion").addEventListener("click", game.burgerMaker);
+document.getElementById("tomato").addEventListener("click", game.burgerMaker);
+document.getElementById("lettuce").addEventListener("click", game.burgerMaker);
+document.getElementById("patty").addEventListener("click", game.burgerMaker);
+document.getElementById("cheese").addEventListener("click", game.burgerMaker);
+document.getElementById("bottomBun").addEventListener("click", game.burgerMaker);
+
+// Create a "ticket" to display the customer's order
+
+// Create an "orderUp" button to submit orders
 
 const beginGame = document.getElementById("begin")
 beginGame.addEventListener("click", () => {
     document.getElementById("begin").style.display="none"
     timeBegin()
+    document.getElementById("orderUp").style.display="block"
     game.customerOrder()
     console.log(game.customerBurger)
 })
