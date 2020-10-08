@@ -44,22 +44,22 @@ let game = {
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
             game.customerBurger.splice(1, 0, "onion")
-            document.getElementById("ticket").innerHTML = "Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 3) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "onion")
-            document.getElementById("ticket").innerHTML = "Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 2) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
-            document.getElementById("ticket").innerHTML = "Top Bun, Lettuce, Patty Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Lettuce, Patty Cheese, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
-            document.getElementById("ticket").innerHTML = "Top Bun, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Patty, Cheese, Bottom Bun"
         } else {
             game.customerBurger
-            document.getElementById("ticket").innerHTML = "Top Bun, Patty, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Patty, Bottom Bun"
         }
     },
 
@@ -108,7 +108,7 @@ let game = {
             score += 50
         } else {
             document.querySelector(".check").innerHTML = "Wait! Something's wrong!"
-            score -= 10
+            score -= 25
         }
     },
 

@@ -34,9 +34,13 @@ img {
 
 #orderUp, #reset {
     display: none;
+    margin: 0 auto;
 }
 
-
+#ticket {
+    border: solid lightgray 10px;
+    background-color: blanchedalmond;
+}
 
 span {
     font-weight: bold;
@@ -46,4 +50,8 @@ span {
     margin: 50px 0 50px 0;
     background: limegreen;
     color: white;
+}
+
+.intro {
+    text-align: left;
 }
