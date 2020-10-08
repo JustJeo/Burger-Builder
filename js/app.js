@@ -195,5 +195,6 @@ playAgain.addEventListener("click", () =>  {
     console.log(game.customerBurger)
     timer = 30
     score = 0
-    document.querySelector(".check").innerHTML = "New Order!!"
+    document.querySelector("#score").innerHTML = `Current Score = ${score}`
+    document.querySelector(".check").innerHTML = "Here's a new order!"
 })
