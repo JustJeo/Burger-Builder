@@ -107,10 +107,13 @@ let game = {
             console.log("Good Burger!")
             document.querySelector(".check").innerHTML = "Great Job! 50 Points!"
             score += 50
+            document.querySelector("#score").innerHTML = `Current Score = ${score}`
         } else {
             console.log("WTF Burger?")
             document.querySelector(".check").innerHTML = "What'd you do? Build this upside down?!?"
             score -= 25
+            document.querySelector("#score").innerHTML = `Current Score = ${score}`
+        document.querySelector(".gameplay").reset()
         }
     },
 
@@ -127,7 +130,10 @@ let game = {
         } else {
             document.querySelector(".results").innerHTML = "Wow. You did terrible. What was that?"
         }
+        document.getElementById("reset").style.display = "block"
+        document.getElementById("orderUp").style.display = "none"
     }
+
 }
 
 // Create a reset button to play again WITHOUT reloading the page
@@ -139,10 +145,6 @@ results.innerHTML = "Get those orders out!"
 document.body.appendChild(results)
 
 document.getElementById("orderUp").addEventListener("click", game.orderCheck)
-
-let burgerCheck = document.createElement("p")
-burgerCheck.setAttribute("class", "check")
-document.body.appendChild(burgerCheck)
 
 document.getElementById("topBun").addEventListener("click", game.burgerMaker);
 document.getElementById("onion").addEventListener("click", game.burgerMaker);
