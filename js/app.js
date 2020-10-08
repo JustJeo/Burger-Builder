@@ -1,14 +1,17 @@
 console.log("AYO! This is Jeo!")
 
 //Declare multiple things when the page loads
-    // Buttons to add ingredients
-    // Timer stuck at 3:00
-let timer = 30;
+    // Timer stuck at 1:00 / 60s
+        // For testing purposes, set to different seconds amounts
+let timer = 20;
     // Current Score set at 0
+        // For testing purposes, set to 20
 let score = 20;
     // High Score set at whatever the current high score is
+        // Default at 0 but change after round changes
 let highscore = 10;
         // NOTE! High score WILL reset with every reload
+            // Still haven't figured out how to keep it
 
 // Timer Countdown that runs when "begin" button is clicked
 function timeBegin() {
@@ -26,14 +29,10 @@ function timeBegin() {
     }, 1000)
 }
 
-// Start Game!
+// Start Game! Array
 let game = {
     playerBurger: [],
     customerBurger: ["topBun", "patty", "bottomBun"],
-        // When clicked it will fire multiple functions
-            // Timer Countdown
-            // High Score
-            // Create display for customer order
 
 // Create a "customerBurger" function
     // Creates an array where it ALWAYS starts with a "topBun", randomizes the middle ingredients, ALWAYS has a "patty", and always ends with a "bottomBun"
@@ -130,22 +129,18 @@ let game = {
         } else {
             document.querySelector(".results").innerHTML = "Wow. You did terrible. What was that?"
         }
+        document.querySelector(".check").innerHTML = "Time's Up!"
         document.getElementById("reset").style.display = "block"
         document.getElementById("orderUp").style.display = "none"
     }
-
 }
-
-// Create a reset button to play again WITHOUT reloading the page
-    // This will keep the highscore and refreshing the page will set it all to their default value
 
 let results = document.createElement("h2")
 results.setAttribute("class", "results")
 results.innerHTML = "Get those orders out!"
 document.body.appendChild(results)
 
-document.getElementById("orderUp").addEventListener("click", game.orderCheck)
-
+document.getElementById("orderUp").addEventListener("click", game.orderCheck);
 document.getElementById("topBun").addEventListener("click", game.burgerMaker);
 document.getElementById("onion").addEventListener("click", game.burgerMaker);
 document.getElementById("tomato").addEventListener("click", game.burgerMaker);
@@ -154,9 +149,12 @@ document.getElementById("patty").addEventListener("click", game.burgerMaker);
 document.getElementById("cheese").addEventListener("click", game.burgerMaker);
 document.getElementById("bottomBun").addEventListener("click", game.burgerMaker);
 
-// Create a "ticket" to display the customer's order
-
-// Create an "orderUp" button to submit orders
+// Clicking the "Begin" button
+    // When clicked it will fire multiple functions
+        // Timer Countdown
+        // Generate customer order
+        // Create display for customer order
+        // Hide the "begin" button so it can't be clicked again
 
 const beginGame = document.getElementById("begin")
 beginGame.addEventListener("click", () => {

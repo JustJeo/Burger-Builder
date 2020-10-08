@@ -11,12 +11,15 @@
     <div class = "container"></div>
         <div>
             <h1>Hamburger Builder</h1>
+            <!-- Game Rules -->
             <p class = "intro"><span class = "howTo">How to play!</span> Build as many burgers as you can in 1 minute! Make sure the orders are made in the correct order because every correct burger will earn you points but every wrong burger will lose you points!</p>
-            <h2><span id = "timer">Timer: 30s</span><br>
+            <!-- Create a place for the hud -->
+            <h2><span id = "timer">Timer: 20s</span><br>
                 <span id = "score">Current Score = 0</span><br>
                 <span id = "highscore">High Score = 0</span></h2>
             <h2></h2>
         </div>
+        <!-- Create a place for all the ingredient buttons to appear -->
         <section class = "gameplay">
             <div class = "ingredients">
                 <button id = "topBun">Top Bun</button>
@@ -28,11 +31,14 @@
                 <button id = "bottomBun">Bottom Bun</button>
             </div>
             <div class = "start">
+                <!-- // Create a "ticket" to display the customer's order-->
                 <p id = "ticket"></p>
+                <!-- Create a "begin" button -->
                 <button id = "begin">Click to Begin!</button>
                 <p class = "check"></p>
             </div>
         </section>
+        <!-- Create a place for all the images to appear when the buttons get clicked -->
         <div class = "burger">
             <img id = "topBunPic" src = "images/TopBun.jpg">
             <img id = "onionPic" src = "images/Onion.png">
@@ -43,7 +49,10 @@
             <img id = "bottomBunPic" src = "images/BottomBun.jpg">
         </div>
         <div class = "afterStart">
+            <!-- Create an "orderUp" button to compare customer orders and player Burgers" -->
             <button id = "orderUp">Order Up!</button>
+            <!-- Create a "reset" button for players to play again when the game is over -->
+                <!-- // The reset button should NOT reload the page! This will keep the highscore and refreshing the page will set it all to their default value of 0 -->
             <button id = "reset">Play Again!</button>
         </div>
     </div>
