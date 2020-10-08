@@ -3,7 +3,7 @@ console.log("AYO! This is Jeo!")
 //Declare multiple things when the page loads
     // Timer stuck at 1:00 / 60s
         // For testing purposes, set to different seconds amounts
-let timer = 60;
+let timer = 30;
     // Current Score set at 0
         // For testing purposes, set to 20
 let score = 0;
@@ -183,4 +183,17 @@ beginGame.addEventListener("click", () => {
     document.getElementById("orderUp").style.display="block"
     game.customerOrder()
     console.log(game.customerBurger)
+})
+
+const playAgain = document.getElementById("reset")
+playAgain.addEventListener("click", () =>  {
+    document.getElementById("reset").style.display="none"
+    timeBegin()
+    document.getElementById("orderUp").style.display="block"
+    game.customerOrder()
+    game.resetMe()
+    console.log(game.customerBurger)
+    timer = 30
+    score = 0
+    document.querySelector(".check").innerHTML = "New Order!!"
 })
