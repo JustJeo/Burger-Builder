@@ -3,13 +3,13 @@ console.log("AYO! This is Jeo!")
 //Declare multiple things when the page loads
     // Timer stuck at 1:00 / 60s
         // For testing purposes, set to different seconds amounts
-let timer = 20;
+let timer = 60;
     // Current Score set at 0
         // For testing purposes, set to 20
-let score = 20;
+let score = 0;
     // High Score set at whatever the current high score is
         // Default at 0 but change after round changes
-let highscore = 10;
+let highscore = 0;
         // NOTE! High score WILL reset with every reload
             // Still haven't figured out how to keep it
 
@@ -52,7 +52,7 @@ let game = {
         } else if (randomOrder === 2) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Lettuce, Patty Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
             document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
@@ -110,10 +110,27 @@ let game = {
         } else {
             console.log("WTF Burger?")
             document.querySelector(".check").innerHTML = "What'd you do? Build this upside down?!?"
-            score -= 25
+            score -= 100
             document.querySelector("#score").innerHTML = `Current Score = ${score}`
-        document.querySelector(".gameplay").reset()
         }
+        game.resetMe()
+    },
+
+// Reset function!
+    // Hides all pictures
+    // Empties out the player's burger array
+    // creates a new customer burger
+    resetMe: function() {
+        document.getElementById("bottomBunPic").style.display="none"
+        document.getElementById("cheesePic").style.display="none"
+        document.getElementById("pattyPic").style.display="none"
+        document.getElementById("lettucePic").style.display="none"
+        document.getElementById("tomatoPic").style.display="none"
+        document.getElementById("onionPic").style.display="none"
+        document.getElementById("topBunPic").style.display="none"
+        game.playerBurger = []
+        game.customerBurger = ["topBun", "patty", "bottomBun"],
+        game.customerOrder()
     },
 
     // When timer runs down to 0
@@ -141,6 +158,9 @@ results.innerHTML = "Get those orders out!"
 document.body.appendChild(results)
 
 document.getElementById("orderUp").addEventListener("click", game.orderCheck);
+
+// Top line is different than bottom block
+
 document.getElementById("topBun").addEventListener("click", game.burgerMaker);
 document.getElementById("onion").addEventListener("click", game.burgerMaker);
 document.getElementById("tomato").addEventListener("click", game.burgerMaker);
