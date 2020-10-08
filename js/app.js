@@ -3,7 +3,7 @@ console.log("AYO! This is Jeo!")
 //Declare multiple things when the page loads
     // Buttons to add ingredients
     // Timer stuck at 3:00
-let timer = 10;
+let timer = 30;
     // Current Score set at 0
 let score = 20;
     // High Score set at whatever the current high score is
@@ -44,22 +44,22 @@ let game = {
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
             game.customerBurger.splice(1, 0, "onion")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants an everything burger! <br><br> Top Bun, Onion, Tomato, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 3) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "onion")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 2) {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Lettuce, Patty Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Lettuce, Patty Cheese, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
         } else {
             game.customerBurger
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br> Top Bun, Patty, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants a plain burger! <br><br> Top Bun, Patty, Bottom Bun"
         }
     },
 
@@ -103,11 +103,13 @@ let game = {
 
 // Burger Check!
     orderCheck: function() {
-        if (playerBurger === customerBurger) {
+        if (game.playerBurger.toString() === game.customerBurger.toString()) {
+            console.log("Good Burger!")
             document.querySelector(".check").innerHTML = "Great Job! 50 Points!"
             score += 50
         } else {
-            document.querySelector(".check").innerHTML = "Wait! Something's wrong!"
+            console.log("WTF Burger?")
+            document.querySelector(".check").innerHTML = "What'd you do? Build this upside down?!?"
             score -= 25
         }
     },
@@ -135,6 +137,8 @@ let results = document.createElement("h2")
 results.setAttribute("class", "results")
 results.innerHTML = "Get those orders out!"
 document.body.appendChild(results)
+
+document.getElementById("orderUp").addEventListener("click", game.orderCheck)
 
 let burgerCheck = document.createElement("p")
 burgerCheck.setAttribute("class", "check")

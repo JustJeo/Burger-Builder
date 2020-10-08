@@ -15,7 +15,7 @@ button {
     color: black;
     font-size: 1.25em;
     background: lightgray;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -40,6 +40,7 @@ img {
 #ticket {
     border: solid lightgray 10px;
     background-color: blanchedalmond;
+    border-radius: 10px;
 }
 
 span {
