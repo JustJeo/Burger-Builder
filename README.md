@@ -25,6 +25,8 @@ Players have 1 minute to build as many burgers from the bottom up. With every bu
 - If a user has gotten a highscore, the highscore will replace the recently recorded old score.
 
 ## Code Snippets
+This code consists of many functions, lots and lots of functions. I have also included a randomizer and arrays. The main functionality of the game is an object with arrays and functions all nestled into it.
+![orderCheck](orderCheckFunction.png)
 
 ## Credit
 A lot of my function creations came from small snippets of past homework and lectures from my GA SEI-R Program. I compared my timer to that of the timer code from a "Poke-A-Square", I understood the logic of having empty arrays by taking glances at the "High-Card" deliverable, and a lot CSS was taken into consideration from the lesson from the week before.
