@@ -10,7 +10,7 @@ For past homework and lectures, I've had a lot of enjoyment seeing the randomly 
 ![Final](BurgerBuilderFinal.png)
 
 ## How To Play!
-Players have 1 minute to build as many burgers from the bottom up. With every burger sent, it will be compared to the customer's order and perfectly matching burgers will gain players points while incorrect burgers will lose points.
+Players have 1 minute to build as many burgers from the bottom up. With every burger sent, it will be compared to the customer's order and perfectly matching burgers will gain players 50 points while incorrect burgers will lose 100 points.
 
 ## User Stories/Game Logic
 - Players will click the starting button to active a 1 minute timer.
@@ -25,7 +25,10 @@ Players have 1 minute to build as many burgers from the bottom up. With every bu
 - If a user has gotten a highscore, the highscore will replace the recently recorded old score.
 
 ## Code Snippets
-This code consists of many functions, lots and lots of functions. I have also included a randomizer and arrays. The main functionality of the game is an object with arrays and functions all nestled into it.
+- HTML
+- CSS
+- JavaScript
+- This code consists of many functions, lots and lots of functions. I have also included a randomizer and arrays. The main functionality of the game is an object with arrays and functions all nestled into it.
 ![orderCheck](orderCheckFunction.png)
 
 ## Credit
@@ -37,3 +40,8 @@ Any super questionable moments in my code were solved with reaching out to the i
 What are the next steps for this project?
 - First and foremost I want to condense and DRY up the code as much as I can. There are a lot of hard coded areas where I could substitute with a proper loop. With the extra time permitted I should have the code looking much cleaner
 - I want to possibly make spin-off versions of this game. The world has so many different types of food, why only stop at burgers? I have been thinking of a sushi maker, a taco constructor, and everything in between.
+
+## Play The Game!
+Play the game by clicking on link below!
+
+https://justjeo.github.io/Burger-Builder/
