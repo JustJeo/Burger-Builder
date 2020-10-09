@@ -48,17 +48,17 @@ let game = {
             game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "onion")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants no tomato! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 2) {
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants no onion and no cheese! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants a cheeseburger with extra meat! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
         } else {
             game.customerBurger
-            document.getElementById("ticket").innerHTML = "The customer wants a plain burger! <br><br> Top Bun, Patty, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants a plain hamburger! <br><br> Top Bun, Patty, Bottom Bun"
         }
     },
 

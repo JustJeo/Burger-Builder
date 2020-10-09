@@ -6,10 +6,12 @@
 html {
     background: url("https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/18944/19581/76361-1024__17925.1515427213.jpg?c=2?imbypass=on");
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 body {
-    margin: 10px auto;
+    margin: 100px auto;
     text-align: center;
     /* color: white; */
     font-size: 1.75em;
@@ -73,8 +75,8 @@ img {
     margin: 0 auto;
 }
 
-span {
-    font-weight: bold;
+.howTo {
+    color: red;
 }
 
 #begin {
