@@ -26,6 +26,7 @@ Players have 1 minute to build as many burgers from the bottom up. With every bu
 
 ## Wireframing/Pre-Coding and Planning
 During the pre-coding stage I had originally planned everything out on my Samsung Note 9 and hand wrote a small visualization of what I thought the game should look like!
+
 ![Phone1](WireFrame1.jpg)
 ![Phone2](WireFrame2.jpg)
 
@@ -39,7 +40,11 @@ During the pre-coding stage I had originally planned everything out on my Samsun
 ## Credit
 A lot of my function creations came from small snippets of past homework and lectures from my GA SEI-R Program. I compared my timer to that of the timer code from a "Poke-A-Square", I understood the logic of having empty arrays by taking glances at the "High-Card" deliverable, and a lot CSS was taken into consideration from the lesson from the week before.
 
-Any super questionable moments in my code were solved with reaching out to the instructors and using MDN, overstack flow, and w3schools websites of a wide variety.
+Any super questionable moments in my code were solved with reaching out to the instructors and using 
+- MDN
+- overstack flow
+- w3schools 
+websites of a wide variety.
 
 Of course I have to give credit to the party room where I was able to meet up with classmates everyday for project week and we helped each other out with our codes. Though we were working on different games we were still able to do our best to help out.
 
