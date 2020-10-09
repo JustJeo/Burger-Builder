@@ -24,6 +24,11 @@ Players have 1 minute to build as many burgers from the bottom up. With every bu
 - After 1 minute, the option to send an order in will be disabled and text will display how the player did.
 - If a user has gotten a highscore, the highscore will replace the recently recorded old score.
 
+## Wireframing/Pre-Coding and Planning
+During the pre-coding stage I had originally planned everything out on my Samsung Note 9 and hand wrote a small visualization of what I thought the game should look like!
+![Phone1](WireFrame1.jpg)
+![Phone2](WireFrame2.jpg)
+
 ## Code Snippets
 - HTML
 - CSS
