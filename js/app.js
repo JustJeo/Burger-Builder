@@ -52,7 +52,7 @@ let game = {
         } else if (randomOrder === 2) {
             game.customerBurger.splice(1, 0, "lettuce")
             game.customerBurger.splice(1, 0, "tomato")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Tomato, Lettuce, Cheese, Bottom Bun"
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Tomato, Lettuce, Patty, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
             document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Patty, Cheese, Bottom Bun"

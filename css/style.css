@@ -1,10 +1,11 @@
 * {
     /* background-color: deepskyblue; */
-    font-family: Helvetica;
+    font-family: "Chewy", Helvetica;
 }
 
 html {
-    background-color: lightskyblue;
+    background: url("https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/18944/19581/76361-1024__17925.1515427213.jpg?c=2?imbypass=on");
+    background-size: cover;
 }
 
 body {
@@ -42,8 +43,11 @@ img {
     padding-top: 20px;
 }
 
-h1 {
+.gameName>h1 {
     display: inline;
+    font-size: 5em;
+    color: dodgerblue;
+    text-shadow: royalblue 5px 5px;
 }
 
 .ingredients {
@@ -77,4 +81,8 @@ span {
     margin: 50px 0 50px 0;
     background: limegreen;
     color: white;
+}
+
+#timer {
+    color: red;
 }
