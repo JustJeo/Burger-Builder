@@ -36,6 +36,10 @@ A lot of my function creations came from small snippets of past homework and lec
 
 Any super questionable moments in my code were solved with reaching out to the instructors and using MDN, overstack flow, and w3schools websites of a wide variety.
 
+Of course I have to give credit to the party room where I was able to meet up with classmates everyday for project week and we helped each other out with our codes. Though we were working on different games we were still able to do our best to help out.
+
+I also want to thank my significant other for keeping me sane and pushing me to keep going and to not give up.
+
 ## Future Development
 What are the next steps for this project?
 - First and foremost I want to condense and DRY up the code as much as I can. There are a lot of hard coded areas where I could substitute with a proper loop. With the extra time permitted I should have the code looking much cleaner
