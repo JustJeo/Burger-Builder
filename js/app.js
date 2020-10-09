@@ -3,7 +3,7 @@ console.log("AYO! This is Jeo!")
 //Declare multiple things when the page loads
     // Timer stuck at 1:00 / 60s
         // For testing purposes, set to different seconds amounts
-let timer = 30;
+let timer = 60;
     // Current Score set at 0
         // For testing purposes, set to 20
 let score = 0;
@@ -152,11 +152,6 @@ let game = {
     }
 }
 
-let results = document.createElement("h2")
-results.setAttribute("class", "results")
-results.innerHTML = "Get those orders out!"
-document.body.appendChild(results)
-
 document.getElementById("orderUp").addEventListener("click", game.orderCheck);
 
 // Top line is different than bottom block
@@ -183,18 +178,19 @@ beginGame.addEventListener("click", () => {
     document.getElementById("orderUp").style.display="block"
     game.customerOrder()
     console.log(game.customerBurger)
+    document.querySelector(".results").innerHTML = "Get those orders out!"
 })
 
 const playAgain = document.getElementById("reset")
 playAgain.addEventListener("click", () =>  {
-    document.getElementById("reset").style.display="none"
+    document.getElementById("reset").style.display = "none"
     timeBegin()
-    document.getElementById("orderUp").style.display="block"
-    game.customerOrder()
+    document.getElementById("orderUp").style.display = "block"
     game.resetMe()
     console.log(game.customerBurger)
-    timer = 30
+    timer = 60
     score = 0
     document.querySelector("#score").innerHTML = `Current Score = ${score}`
     document.querySelector(".check").innerHTML = "Here's a new order!"
+    document.querySelector(".results").innerHTML = "Get those orders out!"
 })

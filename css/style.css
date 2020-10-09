@@ -3,12 +3,21 @@
     font-family: Helvetica;
 }
 
+html {
+    background-color: lightskyblue;
+}
+
 body {
-    margin: 0px auto;
+    margin: 10px auto;
     text-align: center;
     /* color: white; */
-    font-size: 2em;
+    font-size: 1.75em;
     width: 70%;
+    height: 100%;
+    background-color: white;
+    border: solid 5px dodgerblue;
+    padding: 0 15px 150px 15px;
+    text-shadow: grey 1px 1px;
 }
 
 button {
@@ -32,15 +41,23 @@ img {
     margin-bottom: 50px;
 }
 
+.ingredients>button {
+    margin: 0 10px 0 10px
+}
+
 #orderUp, #reset {
     display: none;
-    margin: 0 auto;
+    margin: 50px auto;
+    background: limegreen;
+    color: white;
 }
 
 #ticket {
     border: solid lightgray 10px;
     background-color: blanchedalmond;
     border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 span {
@@ -51,8 +68,4 @@ span {
     margin: 50px 0 50px 0;
     background: limegreen;
     color: white;
-}
-
-.intro {
-    text-align: left;
 }
