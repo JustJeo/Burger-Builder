@@ -37,6 +37,15 @@ img {
     display: none;
 }
 
+.condiment {
+    display: inline;
+    padding-top: 20px;
+}
+
+h1 {
+    display: inline;
+}
+
 .ingredients {
     margin-bottom: 50px;
 }

@@ -50,9 +50,9 @@ let game = {
             game.customerBurger.splice(1, 0, "onion")
             document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Onion, Lettuce, Patty, Cheese, Bottom Bun"
         } else if (randomOrder === 2) {
-            game.customerBurger.splice(2, 0, "cheese")
             game.customerBurger.splice(1, 0, "lettuce")
-            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Lettuce, Patty, Cheese, Bottom Bun"
+            game.customerBurger.splice(1, 0, "tomato")
+            document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Tomato, Lettuce, Cheese, Bottom Bun"
         } else if (randomOrder === 1) {
             game.customerBurger.splice(2, 0, "cheese")
             document.getElementById("ticket").innerHTML = "The customer wants this! <br><br> Top Bun, Patty, Cheese, Bottom Bun"
