@@ -88,3 +88,27 @@ img {
 #timer {
     color: red;
 }
+
+/* For mobile phones */
+@media (max-width: 400px) {
+    body {
+        width: 80%;
+        font-size: 1.5em;
+    }
+    .gameName {
+        font-size: .75em;
+    }
+    .ingredients>button {
+        margin: 0;
+    }
+    #ticket {
+        width: 90%;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 500px) {
+    .gameName {
+        font-size: .75em;
+    }
+}
