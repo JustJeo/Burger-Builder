@@ -9,6 +9,9 @@ For past homework and lectures, I've had a lot of enjoyment seeing the randomly 
 
 ![Final](BurgerBuilderFinal.png)
 
+An update to the game's background image in early March 2021 has changed the landing page to look like this.
+![Final2](BurgerBuilderFinal2.0.png)
+
 ## How To Play!
 Players have 1 minute to build as many burgers from the bottom up. With every burger sent, it will be compared to the customer's order and perfectly matching burgers will gain players 50 points while incorrect burgers will lose 100 points.
 

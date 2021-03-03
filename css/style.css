@@ -4,7 +4,7 @@
 }
 
 html {
-    background: url("https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/18944/19581/76361-1024__17925.1515427213.jpg?c=2?imbypass=on");
+    background: url("../images/pixelBurger.png");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -106,9 +106,10 @@ img {
     }
 }
 
-/* For Tablets */
-@media (max-width: 500px) {
+/* Responsive Code */
+/* Phone */
+@media only screen and (max-width: 850px) {
     .gameName {
-        font-size: .75em;
+        font-size: .5em;
     }
 }
